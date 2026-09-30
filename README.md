@@ -1,5 +1,5 @@
 # void-numba
-This repository contains XBPS templates for packaging Numba and its dependency llvmlite for Void Linux.
+This repository contains XBPS templates for packaging numba and its dependency llvmlite for Void Linux.
 
 It provides `python3-numba` and `python3-llvmlite`.
 
