@@ -24,6 +24,6 @@ Build the packages (llvmlite first, then numba):
 
 Install the packages:
 
-``sh
+```sh
 xi python3-llvmlite python3-numba
-``
+```
