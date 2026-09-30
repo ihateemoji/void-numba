@@ -19,22 +19,16 @@ checksum=e73ad74110d60ec3eef076431b8853a5e8f940a83bd544cbff4c02d4c544ada0
 export LLVMLITE_SHARED=1
 
 pre_build() {
-	# Point CMake at the versioned LLVM install
-	# Native: /usr/lib/llvm/N
-	# Cross:  ${XBPS_CROSS_BASE}/usr/lib/llvm/N
 	local _prefix="/usr/lib/llvm/${_llvmver}"
 	if [ -n "$CROSS_BUILD" ]; then
 		_prefix="${XBPS_CROSS_BASE}${_prefix}"
 	fi
 	export CMAKE_PREFIX_PATH="${_prefix}"
 	export LLVM_DIR="${_prefix}/lib/cmake/llvm"
-	# cmake is a host executable. Make sure Python subprocesses can find it.
 	export PATH="/usr/bin:${PATH}"
 }
 
 do_check() {
-	# Do not run pytest from the package root: it discovers
-	# conda-recipes/llvmlite/run_test.py.
 	python3 runtests.py
 }
 
