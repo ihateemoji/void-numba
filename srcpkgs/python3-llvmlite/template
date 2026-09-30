@@ -40,7 +40,4 @@ do_check() {
 
 post_install() {
 	vlicense LICENSE
-	# Numba looks for the shared lib next to the binding
-	ln -sf /usr/lib/llvm/${_llvmver}/lib/libLLVM-${_llvmver}.so \
-		"${DESTDIR}/${py3_sitelib}/llvmlite/binding/libLLVM-${_llvmver}.so"
 }
