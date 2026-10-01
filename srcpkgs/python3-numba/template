@@ -1,6 +1,6 @@
 # Template file for 'python3-numba'
 pkgname=python3-numba
-version=0.67.0
+version=0.68.0
 revision=1
 build_style=python3-pep517
 hostmakedepends="python3-build python3-setuptools python3-wheel python3-numpy"
@@ -13,7 +13,7 @@ license="BSD-2-Clause"
 homepage="https://numba.pydata.org/"
 changelog="https://numba.readthedocs.io/en/stable/release-notes.html"
 distfiles="https://github.com/numba/numba/archive/refs/tags/${version}.tar.gz"
-checksum=1020d4b8f32487920622f4ad16980911b3f055b63ccb48a92de8e46e03ee10e9
+checksum=c5b760c9acad4faf3c13e1a2c492ca015fbc257909783fd1d588df172f1b8629
 
 do_build() {
 	# Required for the test suite, which imports numba from the source tree.
